@@ -1,0 +1,7 @@
+{
+    "name": "car_showroom_frontend",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react-vite"
+  }
