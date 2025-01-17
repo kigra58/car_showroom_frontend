@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { BASE_URL } from "../utlils/constant";
-import { ENDPOINTS } from "../routes/routes";
+import { BASE_URL } from "../routes/routes";
+import { ENDPOINTS } from "../routes/endpoints";
+
 
 
 const {PAYMENT_ROUTES}=ENDPOINTS;

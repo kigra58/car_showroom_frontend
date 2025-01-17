@@ -1,3 +1,4 @@
+export const BASE_URL = "http://localhost:3021/api/";
 
 export const ROUTES={
     ADMIN:{

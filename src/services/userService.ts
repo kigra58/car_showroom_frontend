@@ -1,6 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { BASE_URL } from "../utlils/constant";
-import { ENDPOINTS } from "../routes/routes";
+import { ENDPOINTS } from "../routes/endpoints";
+import { BASE_URL } from "../routes/routes";
+
+
 
 // interface IUpdateUserDetails {
 //   firstName: string;
@@ -9,7 +11,7 @@ import { ENDPOINTS } from "../routes/routes";
 //   phoneNumber: string;
 // }
 
-const { USER_ROUTES } = ENDPOINTS;
+const { USER } = ENDPOINTS;
 
 export const userApi = createApi({
   reducerPath: "userApi",
@@ -17,7 +19,7 @@ export const userApi = createApi({
   endpoints: (builder) => ({
     getAllUser: builder.query({
       query: () => ({
-        url: USER_ROUTES.USER_LIST,
+        url: USER.PROFILE,
         method:"GET"
       }),
     }),
@@ -27,7 +29,7 @@ export const userApi = createApi({
 
     updateUserDetail: builder.mutation({
       query: (data) => ({
-        url: USER_ROUTES.USER_UPDATE,
+        url: USER.UPDATE_PROFILE,
         method: "POST",
         body: data,
       }),
